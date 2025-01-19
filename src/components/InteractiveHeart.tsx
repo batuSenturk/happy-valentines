@@ -29,7 +29,7 @@ export const InteractiveHeart = () => {
         </svg>
       </motion.div>
       <p className="text-center mt-4 text-romantic-dark/80">
-        {isBeating ? "Beating...      women" : "Click the heart!"}
+        {isBeating ? "Beating... women... with a stick because I'm all yours" : "Click the heart!"}
       </p>
     </section>
   );
