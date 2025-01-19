@@ -8,7 +8,7 @@ export const Header = () => {
       className="py-16 text-center"
     >
       <h1 className="text-6xl md:text-8xl font-bold text-romantic-dark mb-4">
-        My Dearest Huzz (Alice)
+        My Dearest Alice
       </h1>
       <p className="text-xl md:text-2xl text-romantic-dark/80 italic">
         A year full of love and memories
