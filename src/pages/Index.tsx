@@ -7,6 +7,7 @@ import { Timeline } from "@/components/Timeline";
 import { LoveQuotes } from "@/components/LoveQuotes";
 import { InteractiveHeart } from "@/components/InteractiveHeart";
 import { Footer } from "@/components/Footer";
+import { DailyLove } from "@/components/DailyLove";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
           <Timeline />
           <LoveQuotes />
           <ValentineProposal />
+          <DailyLove />
           <InteractiveHeart />
         </motion.section>
       </main>
