@@ -15,6 +15,10 @@ export const ValentineProposal = () => {
     });
   };
 
+  const handleNoClick = () => {
+    handleNoHover();
+  };
+
   const handleYes = () => {
     setAccepted(true);
     confetti({
@@ -46,6 +50,7 @@ export const ValentineProposal = () => {
         <motion.button
           animate={noButtonPosition}
           onHoverStart={handleNoHover}
+          onClick={handleNoClick}
           className="px-8 py-4 text-xl font-bold text-romantic-dark rounded-full border-2 border-romantic-dark hover:bg-romantic/10 transition-colors"
         >
           No
