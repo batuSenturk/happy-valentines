@@ -20,9 +20,9 @@ export default {
     extend: {
       colors: {
         romantic: {
-          light: "#FFE4E1",
-          DEFAULT: "#FFC0CB",
-          dark: "#FF1493",
+          light: "#FFE4E1", // Soft pink
+          DEFAULT: "#FFC0CB", // Medium pink
+          dark: "#FF69B4", // Deep pink
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

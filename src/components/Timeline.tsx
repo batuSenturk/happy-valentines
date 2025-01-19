@@ -27,7 +27,10 @@ export const Timeline = () => {
       <h2 className="text-4xl md:text-5xl font-bold text-romantic-dark text-center mb-12">
         Remember When...
       </h2>
-      <div className="max-w-3xl mx-auto space-y-8">
+      <div className="max-w-3xl mx-auto relative">
+        {/* Vertical line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-romantic/50" />
+        
         {memories.map((memory, index) => (
           <motion.div
             key={index}
@@ -35,18 +38,24 @@ export const Timeline = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
+            className={`flex items-center mb-12 ${
+              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+            }`}
           >
-            <Card className="bg-white/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-romantic-dark">{memory.date}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-romantic-dark/80">{memory.description}</p>
-              </CardContent>
-            </Card>
-            {index < memories.length - 1 && (
-              <Separator className="my-4 bg-romantic/30" />
-            )}
+            {/* Timeline dot */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-romantic-dark rounded-full" />
+            
+            {/* Content */}
+            <div className={`w-1/2 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}>
+              <Card className="bg-white/50 backdrop-blur-sm hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-romantic-dark">{memory.date}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-romantic-dark/80">{memory.description}</p>
+                </CardContent>
+              </Card>
+            </div>
           </motion.div>
         ))}
       </div>
