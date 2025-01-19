@@ -23,8 +23,8 @@ export const ValentineProposal = () => {
       origin: { y: 0.6 },
     });
     toast({
-      title: "Yay! 💖",
-      description: "Thank you for being my Valentine!",
+      title: "Knew you'd click yes",
+      description: "Thank you for being my Valentine once again!",
     });
   };
 

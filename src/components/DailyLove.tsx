@@ -88,7 +88,7 @@ export const DailyLove = ({ showOnlyTimer }: DailyLoveProps) => {
                 exit={{ opacity: 0, y: -20 }}
                 className="relative"
               >
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-7 left-1/2 transform -translate-x-1/2">
                   <motion.div
                     animate={{
                       scale: [1, 1.2, 1],

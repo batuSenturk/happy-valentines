@@ -34,6 +34,7 @@
 @layer base {
   * {
     @apply border-border;
+    cursor: none !important;
   }
   body {
     @apply bg-background text-foreground font-inter;
@@ -44,9 +45,10 @@
 }
 
 .heart-cursor {
-  @apply fixed pointer-events-none z-50 w-8 h-8 transition-all duration-100;
-  margin-left: -16px;
-  margin-top: -16px;
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  will-change: transform;
 }
 
 .parallax-container {

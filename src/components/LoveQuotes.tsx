@@ -2,11 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const quotes = [
-  "Every moment with you is like a dream come true.",
-  "You make my heart skip a beat every time I see you.",
-  "Your love is the greatest gift I've ever received.",
-  "You're the missing piece to my puzzle.",
-  "With you, every day feels like Valentine's Day.",
+  "You're the rest of my heart.",
+  "You're the Catwoman to my Batman.",
+  "I love you more than any corgi.",
+  "Sorry Bibbly.",
+  "I zinged with you.",
 ];
 
 export const LoveQuotes = () => {

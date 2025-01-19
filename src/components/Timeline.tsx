@@ -4,20 +4,60 @@ import { Separator } from "@/components/ui/separator";
 
 const memories = [
   {
-    date: "First Meeting",
-    description: "The day our eyes met and our story began",
+    date: "3 Feb 2024",
+    description: "when we were on facetime making AI photos of us together",
   },
   {
-    date: "First Date",
-    description: "A magical evening that marked the start of our journey",
+    date: "8 Feb 2024",
+    description: "trying to find a room alone to give you the poem I wrote",
   },
   {
-    date: "First Kiss",
-    description: "A moment that made time stand still",
+    date: "14 Feb 2024",
+    description: "don't even know where to start about this. From seeing your cookies to grabbing you by the waist in the gym to the confession to the first kiss",
   },
   {
-    date: "Moving In Together",
-    description: "Creating our home and sharing our lives",
+    date: "11 Mar 2024",
+    description: "the first I love you at the park",
+  },
+  {
+    date: "15 Mar 2024",
+    description: "sitting on the bins at station park holding hands",
+  },
+  {
+    date: "24 Mar 2024",
+    description: "dancing together at the party as spidermans",
+  },
+  {
+    date: "6 May 2024",
+    description: "seeing the meercats at the Wildlife Park",
+  },
+  {
+    date: "14 Mar 2024",
+    description: "the first date at Kibou",
+  },
+  {
+    date: "4 Jun 2024",
+    description: "lying on the grass outside Viv's party talking about kissing",
+  },
+  {
+    date: "27 Aug 2024",
+    description: "trying to make the lipstick heart on our cheeks at Kim's",
+  },
+  {
+    date: "15 Nov 2024",
+    description: "our little photoshoot at the park",
+  },
+  {
+    date: "30 Dec 2024",
+    description: "watching Brooklyn 99 together until it was really late",
+  },
+  {
+    date: "1 Jan 2025",
+    description: "our lovely new year's kiss",
+  },
+  {
+    date: "7 Jan 2025",
+    description: "watching ballerina and playing with the cats at mine twice in a day",
   },
 ];
 
