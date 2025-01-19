@@ -2,7 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import complimentsData from "../data/compliments.json";
 
-export const DailyLove = () => {
+interface DailyLoveProps {
+  showOnlyTimer: boolean;
+}
+
+export const DailyLove = ({ showOnlyTimer }: DailyLoveProps) => {
   const [compliment, setCompliment] = useState("");
   const [timeLeft, setTimeLeft] = useState("");
 
@@ -53,24 +57,28 @@ export const DailyLove = () => {
     return () => clearInterval(timer);
   }, []);
 
+  if (showOnlyTimer) {
+    return (
+      <div className="text-lg md:text-xl font-bold text-romantic-dark font-mono">
+        {timeLeft}
+      </div>
+    );
+  }
+
   return (
     <section className="py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-romantic-light/50 to-romantic/50 backdrop-blur-sm" />
+      <div className="absolute inset-0 bg-gradient-to-br from-romantic-light/50 via-romantic/30 to-romantic-dark/20 backdrop-blur-sm" />
       
       <div className="container relative z-10">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-xl"
+            className="bg-white/80 backdrop-blur-md rounded-3xl p-8 shadow-xl border border-romantic/20"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-romantic-dark text-center mb-8">
-              Countdown to Valentine's
+            <h2 className="text-4xl md:text-5xl font-bold text-romantic-dark text-center mb-8 font-playfair">
+              Daily Love Note
             </h2>
-            
-            <div className="text-3xl md:text-4xl font-bold text-romantic-dark text-center mb-12 font-mono">
-              {timeLeft}
-            </div>
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -84,18 +92,20 @@ export const DailyLove = () => {
                   <motion.div
                     animate={{
                       scale: [1, 1.2, 1],
+                      rotate: [0, 10, -10, 0],
                     }}
                     transition={{
                       duration: 2,
                       repeat: Infinity,
                       ease: "easeInOut",
                     }}
+                    className="text-2xl"
                   >
                     ❤️
                   </motion.div>
                 </div>
                 
-                <p className="text-xl md:text-2xl text-romantic-dark/90 text-center italic font-playfair">
+                <p className="text-xl md:text-2xl text-romantic-dark/90 text-center italic font-playfair leading-relaxed">
                   "{compliment}"
                 </p>
               </motion.div>

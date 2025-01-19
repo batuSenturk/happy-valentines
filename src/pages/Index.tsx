@@ -15,18 +15,31 @@ const Index = () => {
       <HeartCursor />
       <FloatingHearts />
       
-      <main className="container mx-auto px-4">
+      <div className="fixed top-4 left-4 z-50">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white/30 backdrop-blur-md rounded-2xl p-4 shadow-xl"
+        >
+          <DailyLove showOnlyTimer={true} />
+        </motion.div>
+      </div>
+      
+      <main className="container mx-auto px-4 relative z-10">
         <Header />
         
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="space-y-8 relative z-10"
+          className="space-y-16 relative"
         >
           <Timeline />
           <LoveQuotes />
           <ValentineProposal />
-          <DailyLove />
+          <div className="py-16">
+            <DailyLove showOnlyTimer={false} />
+          </div>
           <InteractiveHeart />
         </motion.section>
       </main>
