@@ -28,7 +28,7 @@ export const ValentineProposal = () => {
     });
     toast({
       title: "Knew you'd click yes",
-      description: "Thank you for being my Valentine once again!",
+      description: "Thank you for being my Valentine another year!",
     });
   };
 

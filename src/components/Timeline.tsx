@@ -65,7 +65,7 @@ export const Timeline = () => {
   return (
     <section className="py-16">
       <h2 className="text-4xl md:text-5xl font-bold text-romantic-dark text-center mb-12">
-        Remember When...
+        Remember...
       </h2>
       <div className="max-w-3xl mx-auto relative">
         {/* Vertical line */}

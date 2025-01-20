@@ -1,8 +1,19 @@
 import { useEffect, useState } from "react";
 
-export const HeartCursor = () => {
+const HeartCursor = () => {
+  const [isCursor, setIsCursor] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const updateCursor = () => {
+      setIsCursor(window.matchMedia("(pointer: fine)").matches);
+    };
+
+    updateCursor();
+    window.addEventListener("resize", updateCursor);
+    return () => window.removeEventListener("resize", updateCursor);
+  }, []);
 
   useEffect(() => {
     const updateMousePosition = (e: MouseEvent) => {
@@ -23,6 +34,8 @@ export const HeartCursor = () => {
     };
   }, []);
 
+  if (!isCursor) return null;
+
   return (
     <div
       className="heart-cursor"
@@ -41,3 +54,5 @@ export const HeartCursor = () => {
     </div>
   );
 };
+
+export default HeartCursor;
