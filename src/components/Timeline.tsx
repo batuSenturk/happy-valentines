@@ -32,12 +32,12 @@ const memories = [
     description: "seeing the meercats at the Wildlife Park",
   },
   {
-    date: "14 Mar 2024",
-    description: "the first date at Kibou",
-  },
-  {
     date: "4 Jun 2024",
     description: "lying on the grass outside Viv's party talking about kissing",
+  },
+  {
+    date: "14 Jun 2024",
+    description: "the first date at Kibou",
   },
   {
     date: "27 Aug 2024",
